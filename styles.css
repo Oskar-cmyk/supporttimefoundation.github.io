@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-text') format('truetype'); /* Import the font */
+}
+
+body {
+    font-family: 'SF Pro Text', Arial, sans-serif; /* Set SF Pro Text as the primary font with fallback to Arial and sans-serif */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.token-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add margin-bottom to create space between token list and form */
+}
+
+.token {
+    flex: 1;
+    padding: 15px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.token:hover {
+    transform: scale(1.05);
+}
+
+.token.selected {
+    border: 2px solid #007bff;
+}
+
+.token.selected button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    font-family: inherit; /* Inherit font from body */
+}
+
+.explanation {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.explanation.active {
+    display: block;
+}
+
+#comment,
+#token,
+#mail {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    font-size: 16px; /* Set font size for inputs */
+    font-family: inherit; /* Inherit font from body */
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    height: 50px; /* Adjust the height as needed */
+    font-size: 12px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 600px) {
+    .token-list {
+        flex-direction: column;
+    }
+
+    .token {
+        margin: 10px 0;
+    }
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit; /* Inherit font from body */
+}
