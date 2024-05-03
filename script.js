@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }, "ZRxqAeYU2Bcg6hb4t")
         .then(function(response) {
             console.log('Email sent successfully:', response);
-            alert('Support request submitted successfully! Check your email for details.');
+            alert('Support request submitted successfully!');
             form.reset();
             tokens.forEach(t => t.classList.remove('selected'));
             explanations.forEach(explanation => explanation.style.display = 'none');
         }, function(error) {
             console.error('Email sending failed:', error);
-            alert('Email sending failed. Please try again later.');
+            alert('Request sending failed. Please try again later.');
         });
     });
 
