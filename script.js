@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const mail = form.mail.value;
         const deadline = form.deadline.value;
 
-        console.log('Mail:', mail);x
+        console.log('Mail:', mail);
         console.log('Token:', token);
         console.log('Comment:', comment);
         console.log('Deadline:', deadline);
