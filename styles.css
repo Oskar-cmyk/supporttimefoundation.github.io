@@ -109,25 +109,46 @@ footer {
 }
 
 /* Gold token styles */
+/* Default gold token styling */
 .gold-token {
-    background-color: #FFD700; /* Gold color */
-    color: #DAA520; /* Dark golden color for text */
-    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5); /* Soft golden shadow */
-    border: 2px solid #DAA520; /* Dark golden border */
-    padding: 30px; /* Larger padding */
+    background-color: #ffd700; /* Default gold background */
+    color: #000000; /* Black text */
+    padding: 30px;
     margin-top: 20px;
-    text-align: center;
-    border-radius: 10px; /* Rounded corners */
-    font-size: 1.2em; /* Make text bigger */
+    border: 2px solid #daa520; /* Dark gold border */
+    border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 100%;
+}
+
+/* Premium theme - apply gradient to Gold Token */
+body.premium .gold-token {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite; /* Gradient animation */
+    color: #000000; /* Ensure text remains black for contrast */
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5); /* Optional: glowing effect */
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Hover effect for gold token */
 .gold-token:hover {
     transform: scale(1.05); /* Slightly increase size */
     box-shadow: 0px 0px 20px 10px rgba(255, 223, 0, 0.8); /* Intensified glow */
-}
+}/* Gold Token button gradient animation */
+
+
 
 /* Style the button inside gold token */
 .gold-token button {
