@@ -70,3 +70,42 @@ document.addEventListener('DOMContentLoaded', function() {
         return `https://www.google.com/calendar/event?action=TEMPLATE&dates=${startDate}/${endDate}&text=${encodedTitle}&details=${encodedDescription}&location=${encodedLocation}`;
     };
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const tokens = document.querySelectorAll('.token');
+    const submitButton = document.querySelector('.submit-button');
+    const body = document.body;
+    const emailInput = document.getElementById('mail'); // Email input field
+
+    tokens.forEach(token => {
+        token.addEventListener('click', function() {
+            // Check if the token is the Gold Token
+            if (this.dataset.name === 'GoldToken') {
+                // Get the entered email
+                const enteredEmail = emailInput.value.trim();
+
+                // Validate if the entered email is "lana.pozlep@gmail.com"
+                if (enteredEmail !== 'lana.pozlep@gmail.com') {
+                    alert('The Gold Token is only available for chosen users. Please enter the correct email address to unlock it.');
+                    return; // Prevent further actions if the email is incorrect
+                }
+            }
+
+            // Handle the token selection
+            tokens.forEach(t => t.classList.remove('selected'));
+            this.classList.add('selected');
+
+            // Set the selected token in the hidden input
+            const tokenInput = document.getElementById('token');
+            tokenInput.value = this.dataset.name;
+
+            // Apply premium theme only if Gold Token is clicked and the email is correct
+            if (this.dataset.name === 'GoldToken' && emailInput.value.trim() === 'lana.pozlep@gmail.com') {
+                body.classList.add('premium'); // Apply premium theme
+                submitButton.classList.add('gold'); // Make submit button gold
+            } else {
+                body.classList.remove('premium'); // Revert to default theme
+                submitButton.classList.remove('gold'); // Revert submit button to default
+            }
+        });
+    });
+});
