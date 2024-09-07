@@ -107,3 +107,165 @@ footer {
     font-size: 16px;
     font-family: inherit; /* Inherit font from body */
 }
+
+/* Gold token styles */
+.gold-token {
+    background-color: #FFD700; /* Gold color */
+    color: #DAA520; /* Dark golden color for text */
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5); /* Soft golden shadow */
+    border: 2px solid #DAA520; /* Dark golden border */
+    padding: 30px; /* Larger padding */
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.2em; /* Make text bigger */
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 100%;
+}
+
+/* Hover effect for gold token */
+.gold-token:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0px 0px 20px 10px rgba(255, 223, 0, 0.8); /* Intensified glow */
+}
+
+/* Style the button inside gold token */
+.gold-token button {
+    background-color: #DAA520; /* Dark golden button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.gold-token button:hover {
+    background-color: #FFD700; /* Lighter gold on hover */
+    color: #fff;
+}
+/* Gold submit button style */
+.submit-button.gold {
+    background-color: #FFD700; /* Gold color */
+    color: #fff; /* Keep white text */
+}
+/* Default Styles (Light Theme) */
+body {
+    font-family: 'SF Pro Text', Arial, sans-serif;
+    background-color: #f9f9f9; /* Light background */
+    color: #333333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White container background */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Token Styling */
+.token {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Light grey border */
+    color: #333333; /* Dark text color */
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px; /* Rounded token */
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.token:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #f0f0f0; /* Lighten background on hover */
+    border-color: #007bff; /* Blue border on hover */
+}
+
+.submit-button {
+    background-color: #007bff; /* Default blue background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Premium Styles (Dark Theme) - Applies when body has 'premium' class */
+body.premium {
+    background-color: #000000; /* Black background for premium theme */
+    color: #ffffff; /* White text for better readability */
+}
+
+body.premium .container {
+    background-color: #1c1c1c; /* Dark container background */
+    border: 1px solid #333333; /* Darker grey border */
+}
+
+body.premium .token {
+    background-color: #333333; /* Dark grey for token background */
+    border: 1px solid #666666; /* Slightly lighter grey border */
+    color: #ffffff; /* White text */
+}
+
+body.premium .token:hover {
+    background-color: #444444; /* Slightly lighter grey on hover */
+    border-color: #ffd700; /* Gold border on hover */
+}
+
+body.premium .gold-token {
+    background-color: #ffd700; /* Gold background for Gold Token */
+    color: #000000; /* Black text for contrast */
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5); /* Golden glow */
+}
+
+body.premium .submit-button {
+    background-color: #ffd700; /* Gold background for submit button */
+    color: #000000; /* Black text */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black semi-transparent background */
+}
+
+.modal-content {
+    background-color: #1c1c1c; /* Dark modal background */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #666666; /* Lighter grey border for modal */
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px; /* Rounded corners */
+    color: #ffd700; /* Gold text in the modal */
+}
+
+.close {
+    color: #ffd700; /* Gold close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #ffffff; /* White close button on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
